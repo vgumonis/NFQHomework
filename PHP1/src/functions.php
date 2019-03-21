@@ -2,7 +2,7 @@
 
 namespace {
 
-	function calcualteHomeWorkSum (...$numbers) 
+	function calculateHomeWorkSum (...$numbers) 
 	{
 		$sum = 0;
 
@@ -16,7 +16,7 @@ namespace {
 
 namespace Nfq\Akademija\Not_Typed {
 
-	function calcualteHomeWorkSum (...$numbers) :int 
+	function calculateHomeWorkSum (...$numbers) :int 
 	{
 		$sum = 0;
 
@@ -30,7 +30,7 @@ namespace Nfq\Akademija\Not_Typed {
 
 namespace Nfq\Akademija\Soft {
 
-	function calcualteHomeWorkSum (int ...$numbers) :int 
+	function calculateHomeWorkSum (int ...$numbers) :int 
 	{
 		$sum = 0;
 
@@ -38,20 +38,9 @@ namespace Nfq\Akademija\Soft {
 			$sum += $number;
 		}
 
-		return $sum;
+
+
+		return $sum ;
 	}
 }
 
-namespace Nfq\Akademija\Strict {
-
-	function calcualteHomeWorkSum (int ...$numbers) :int 
-	{
-		$sum = 0;
-
-		foreach ($numbers as $number) {
-			$sum += $number;
-		}
-
-		return $sum;
-	}
-}
