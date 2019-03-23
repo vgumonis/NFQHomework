@@ -5,7 +5,7 @@
 
 Realus gautas rezultatas yra 6.2 float'as, taciau kadangi return type'as yra int, 6.2 yra convertuojamas i 6.
 
-### 2. Kas ir kodel nutriko bandant kviesti Nfq\Akademija\Strict\calculateHomeWorkSum(3, 2.2, '1')
+### 2. Kas ir kodel nutiko bandant kviesti Nfq\Akademija\Strict\calculateHomeWorkSum(3, 2.2, '1')
 
 "declare(strict_types=1)" kartu su funcija nera includinami. Norint patestuot, kad veiktu strict type deklaracija reiketu tiesiogiai paleist function_strict.php file'a. Tada ir butu ismetada klaide del netinkamu parametru tipu.
 
