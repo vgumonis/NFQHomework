@@ -14,7 +14,7 @@ body {
 
 }
 
-a {
+.LoginNotification-link {
 	text-decoration: none;
 }
 
@@ -30,6 +30,11 @@ a {
 .LoginNotifications > .LoginNotificationButton {
 	align-items: flex-end;
 }*/
+
+.LoginNotificationButton--right{
+	float:right;
+    margin-right: -42%;
+}
 
 .LoginNotificationCard {
 	width: 60%;
@@ -55,16 +60,22 @@ a {
 	font-weight: bold
 }
 
-.LoginNotificationButton {
+
+.Button{
 	font-size: 15px;
 	color: white;
-	background-color: #206D9C;
 	text-transform: uppercase;
-	padding: 13px;
-	margin: 10px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 3px;
+	padding: 13px;
 	border:none;
 	font-weight: bold;
-	margin: 25pt;
+}
+
+.LoginNotificationButton {
+	
+	background-color: #206D9C;
+	margin: 30px;
+	float:right;
+    margin-right: -42%;
 }
