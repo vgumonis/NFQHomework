@@ -1,5 +1,5 @@
 
-##Databases Homework 1
+## Databases Homework 1
 
 ### 1 .Pakoreguokite DB taip, kad knyga galėtų turėti daugiau nei vieną autorių.
 
@@ -9,8 +9,7 @@ CREATE TABLE IF NOT EXISTS `books_authors` (
 	`book_id` INT NOT NULL, 
 	`author_id` INT NOT NULL, 
 	FOREIGN KEY (book_id) REFERENCES book(id)  , 
-	FOREIGN KEY (author_id) REFERENCES author(id)
-
+	FOREIGN KEY (author_id) REFERENCES author(id),
 	PRIMARY KEY (`id`)
 	)DEFAULT CHARSET=utf8mb4;
 
