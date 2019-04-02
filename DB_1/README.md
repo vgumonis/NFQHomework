@@ -54,9 +54,9 @@ INSERT INTO `books_authors` (`book_id`, `author_id`) VALUES (6,3);
 SELECT  book.title,
 GROUP_CONCAT( " ", a.name,
 " ",a.surname)
-FROM book 
-JOIN books_authors AS ba ON  book.id = ba.book_id
-JOIN author  AS a ON ba.author_id = a.id
+FROM `book` 
+JOIN `books_authors` AS ba ON  book.id = ba.book_id
+JOIN `author`  AS a ON ba.author_id = a.id
 GROUP BY book.title
 ORDER BY book.title;
 ```
