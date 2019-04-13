@@ -2,7 +2,6 @@
 
 namespace Hotel;
 
-use Hotel\Models\Room;
 
 class BookingManager
 {

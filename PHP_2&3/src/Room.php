@@ -1,10 +1,8 @@
 <?php
 
-namespace Hotel\Models;
+namespace Hotel;
 
 use Hotel\Models\Interfaces\Revervable;
-use Hotel\ReservationException;
-use Hotel\Reservation;
 
 abstract class Room implements Revervable
 {
@@ -96,9 +94,8 @@ abstract class Room implements Revervable
         if ($index !== false) {
             unset(self::$reservations[$this->getRoomType()] [$index]);
             return true;
-        } else {
-            return false;
         }
+            return false;
     }
 
     public function __toString()
@@ -121,9 +118,8 @@ abstract class Room implements Revervable
     {
         if ($newReservation->getStartDate() >= $presentReservation->getStartDate() && $newReservation->getStartDate() <= $presentReservation->getEndDate() || $newReservation->getEndDate() >= $presentReservation->getStartDate() && $newReservation->getEndDate() <= $presentReservation->getEndDate()) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
 
