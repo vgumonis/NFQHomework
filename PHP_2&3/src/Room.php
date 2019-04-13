@@ -114,7 +114,7 @@ abstract class Room implements Revervable
         return implode(" ", $info);
     }
 
-    private function canReserve(Reservation $newReservation, Reservation $presentReservation)
+    private function canReserve(Reservation $newReservation, Reservation $presentReservation) :bool
     {
         if ($newReservation->getStartDate() >= $presentReservation->getStartDate() && $newReservation->getStartDate() <= $presentReservation->getEndDate() || $newReservation->getEndDate() >= $presentReservation->getStartDate() && $newReservation->getEndDate() <= $presentReservation->getEndDate()) {
             return true;
