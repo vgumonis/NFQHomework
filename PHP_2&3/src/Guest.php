@@ -30,7 +30,7 @@ class Guest
 
     public function __toString(): string
     {
-        return "Guest with fist name  " . $this->getFirstName() .  " and last name " . $this->getLastName() . ".";
+        return "Guest with fist name  " . $this->getFirstName() . " and last name " . $this->getLastName() . ".";
     }
 
 }

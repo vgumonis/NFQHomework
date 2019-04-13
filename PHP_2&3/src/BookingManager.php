@@ -17,4 +17,9 @@ class BookingManager
         }
     }
 
+    public function __toString(): string
+    {
+        return "Booking Manger Class at your service";
+    }
+
 }

@@ -4,9 +4,7 @@ require "vendor/autoload.php";
 
 $room1 = new \Hotel\Apartment();
 
-echo $room1->getRoomType();
-
-$petras = new \Hotel\Guest("petras" , "petraitis");
+$petras = new \Hotel\Guest("petras", "petraitis");
 
 $reservation1start = new DateTime('2019-10-01T15:03:01.012345Z');
 
@@ -19,7 +17,7 @@ $reservation1 = new \Hotel\Reservation($petras, $reservation1start, $reservation
 
 $room2 = new \Hotel\Apartment();
 
-$petras = new \Hotel\Guest("antanas" , "petraitis");
+$petras = new \Hotel\Guest("antanas", "petraitis");
 
 $reservation2start = new DateTime('2019-10-09T15:03:01.012345Z');
 
@@ -30,10 +28,9 @@ $reservation2 = new \Hotel\Reservation($petras, $reservation2start, $reservation
 \Hotel\BookingManager::bookRoom($room2, $reservation2);
 
 
-
 $room3 = new \Hotel\Bedroom();
 
-$petras = new \Hotel\Guest("petras" , "petraitis");
+$petras = new \Hotel\Guest("petras", "petraitis");
 
 $reservation3start = new DateTime('2019-10-09T15:03:01.012345Z');
 
@@ -46,7 +43,7 @@ $reservation3 = new \Hotel\Reservation($petras, $reservation3start, $reservation
 
 $room4 = new \Hotel\Bedroom();
 
-$petras = new \Hotel\Guest("antanas" , "petraitis");
+$petras = new \Hotel\Guest("antanas", "petraitis");
 
 $reservation4start = new DateTime('2019-10-09T15:03:01.012345Z');
 
@@ -57,9 +54,9 @@ $reservation4 = new \Hotel\Reservation($petras, $reservation4start, $reservation
 \Hotel\BookingManager::bookRoom($room4, $reservation4);
 
 
-var_dump($room3->getReservations());
+//var_dump($room2->getReservations());
 
- ///echo $room3->removeReservation($reservation4);
+echo $room2->removeReservation($reservation2);
 
-//echo $room2;
+
 

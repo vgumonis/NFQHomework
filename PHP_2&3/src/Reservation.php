@@ -10,15 +10,14 @@ class Reservation
     private $endDate;
     private $guest;
 
-
-    public function __construct(Guest $guest, \DateTime $startDate,\DateTime $endDate )
+    public function __construct(Guest $guest, \DateTime $startDate, \DateTime $endDate)
     {
         $this->guest = $guest;
         $this->startDate = $startDate;
         $this->endDate = $endDate;
     }
 
-    public function getStartDate() :\DateTime
+    public function getStartDate(): \DateTime
     {
         return $this->startDate;
     }
@@ -29,7 +28,7 @@ class Reservation
     }
 
 
-    public function getEndDate() :\DateTime
+    public function getEndDate(): \DateTime
     {
         return $this->endDate;
     }
