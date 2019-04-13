@@ -83,7 +83,7 @@ class RoomAbstract implements RevervableInterface
     }
 
 
-    public function addReservation(Reservation $reservation)
+    public function addReservation(Reservation $reservation): int
     {
 
         if (isset(self::$reservations[$this->getRoomType()]) ) {
@@ -98,7 +98,7 @@ class RoomAbstract implements RevervableInterface
         return array_search($reservation, self::$reservations[$this->getRoomType()]);
     }
 
-    public function removeReservation(Reservation $reservation)
+    public function removeReservation(Reservation $reservation): bool
     {
         $index = array_search($reservation, self::$reservations[$this->getRoomType()]);
         if ($index !== false) {

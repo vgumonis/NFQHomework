@@ -4,6 +4,8 @@ require "vendor/autoload.php";
 
 $room1 = new \Hotel\Apartment();
 
+var_dump($room1->getBalcony());
+
 $petras = new \Hotel\Guest("petras", "petraitis");
 
 $reservation1start = new DateTime('2019-10-01T15:03:01.012345Z');
