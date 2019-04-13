@@ -2,9 +2,11 @@
 
 namespace Hotel;
 
+use Hotel\Models\Room;
+
 class BookingManager
 {
-    public static function bookRoom(RoomAbstract $room, Reservation $reservation)
+    public static function bookRoom(Room $room, Reservation $reservation)
     {
         try {
             $roomId = $room->addReservation($reservation);

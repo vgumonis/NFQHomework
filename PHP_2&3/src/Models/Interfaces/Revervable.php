@@ -1,8 +1,10 @@
 <?php
 
-namespace Hotel;
+namespace Hotel\Models\Interfaces;
 
-interface RevervableInterface
+use Hotel\Reservation;
+
+interface Revervable
 {
     public function addReservation(Reservation $reservation) : int;
 

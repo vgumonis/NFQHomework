@@ -1,10 +1,12 @@
 <?php
 
-namespace Hotel;
+namespace Hotel\Models;
 
+use Hotel\Models\Interfaces\Revervable;
 use Hotel\ReservationException;
+use Hotel\Reservation;
 
-class RoomAbstract implements RevervableInterface
+abstract class Room implements Revervable
 {
     private $roomType;
     private static $reservations;

@@ -2,7 +2,9 @@
 
 namespace Hotel;
 
-class Bedroom extends RoomAbstract
+use Hotel\Models\Room;
+
+class Bedroom extends Room
 {
     private $roomType;
     private static $reservations;
