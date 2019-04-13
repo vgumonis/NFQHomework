@@ -2,18 +2,31 @@
 
 namespace Hotel;
 
-class SingleRoom  extends RoomAbstract
+class SingleRoom extends RoomAbstract
 {
-    private $roomType = "Standart";
+    private $roomType;
     private static $reservations;
-    private $roomNumber = 1;
-    private $bedCount = "1";
-    private $restroom = true;
-    private $balcony = false;
-    private $price = 30;
-    private $extras = ["TV",
-        "air-conditioner",
-    ];
+    private $roomNumber;
+    private $bedCount;
+    private $restroom;
+    private $balcony;
+    private $price;
+    private $extras;
+
+    public function __construct()
+    {
+        $this->roomType = "Standard";
+        $this->roomNumber = 1;
+        $this->bedCount = "1";
+        $this->restroom = true;
+        $this->balcony = false;
+        $this->price = 30;
+        $this->extras = [
+            "TV",
+            "air-conditioner",
+        ];
+    }
+
 
     public function getRoomType(): string
     {

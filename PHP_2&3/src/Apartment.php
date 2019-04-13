@@ -5,21 +5,35 @@ namespace Hotel;
 class Apartment extends RoomAbstract
 {
 
-    private $roomType = "Diamond";
+    private $roomType;
     private static $reservations;
-    private $roomNumber = 3;
-    private $bedCount = "4";
-    private $restroom = true;
-    private $balcony = true;
-    private $price = 50;
-    private $extras = ["TV",
-        "air-conditioner",
-        "refrigerator",
-        "kitchen box",
-        "mini-bar",
-        "bathtub",
-        "Wi-fi"
-    ];
+    private $roomNumber;
+    private $bedCount;
+    private $restroom;
+    private $balcony;
+    private $price;
+    private $extras;
+
+
+    public function __construct()
+    {
+        $this->roomType = "Diamond";
+        $this->roomNumber = 3;
+        $this->bedCount = "4";
+        $this->restroom = true;
+        $this->balcony = true;
+        $this->price = 50;
+        $this->extras = ["TV",
+            "air-conditioner",
+            "refrigerator",
+            "kitchen box",
+            "mini-bar",
+            "bathtub",
+            "Wi-fi"
+        ];
+
+    }
+
 
     public function getRoomType(): string
     {

@@ -5,19 +5,31 @@ namespace Hotel;
 class Bedroom extends RoomAbstract
 {
 
-    private $roomType = "Gold";
+    private $roomType;
     private static $reservations;
-    private $roomNumber = 2;
-    private $bedCount = "2";
-    private $restroom = true;
-    private $balcony = true;
-    private $price = 40;
-    private $extras = ["TV",
-        "air-conditioner",
-        "refrigerator",
-        "mini-bar",
-        "bathtub",
-    ];
+    private $roomNumber;
+    private $bedCount;
+    private $restroom;
+    private $balcony;
+    private $price;
+    private $extras;
+
+    public function __construct()
+    {
+        $this->roomType = "Gold";
+        $this->roomNumber = 2;
+        $this->bedCount = "2";
+        $this->restroom = true;
+        $this->balcony = true;
+        $this->price = 40;
+        $this->extras = [
+            "TV",
+            "air-conditioner",
+            "refrigerator",
+            "mini-bar",
+            "bathtub",
+        ];
+    }
 
 
     public function getRoomType(): string
@@ -67,20 +79,20 @@ class Bedroom extends RoomAbstract
     }
 
 
-    public function addReservation(Reservation $reservation)
-    {
-        if (self::$reservations != null) {
-            foreach (self::$reservations as $presentReservation) {
-
-
-                if ($reservation->getStartDate() >= $presentReservation->getStartDate() && $reservation->getStartDate() <= $presentReservation->getEndDate() || $reservation->getEndDate() >= $presentReservation->getStartDate() && $reservation->getEndDate() <= $presentReservation->getEndDate()) {
-                    throw new ReservationException;
-                }
-            }
-        }
-        self::$reservations  [] = $reservation;
-        return array_search($reservation, self::$reservations);
-    }
+//    public function addReservation(Reservation $reservation)
+//    {
+//        if (self::$reservations != null) {
+//            foreach (self::$reservations as $presentReservation) {
+//
+//
+//                if ($reservation->getStartDate() >= $presentReservation->getStartDate() && $reservation->getStartDate() <= $presentReservation->getEndDate() || $reservation->getEndDate() >= $presentReservation->getStartDate() && $reservation->getEndDate() <= $presentReservation->getEndDate()) {
+//                    throw new ReservationException;
+//                }
+//            }
+//        }
+//        self::$reservations  [] = $reservation;
+//        return array_search($reservation, self::$reservations);
+//    }
 
     public function removeReservation(Reservation $reservation)
     {

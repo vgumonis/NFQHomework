@@ -4,6 +4,8 @@ require "vendor/autoload.php";
 
 $room1 = new \Hotel\Apartment();
 
+echo $room1->getRoomType();
+
 $petras = new \Hotel\Guest("petras" , "petraitis");
 
 $reservation1start = new DateTime('2019-10-01T15:03:01.012345Z');
@@ -55,5 +57,9 @@ $reservation4 = new \Hotel\Reservation($petras, $reservation4start, $reservation
 \Hotel\BookingManager::bookRoom($room4, $reservation4);
 
 
-echo $room2;
+var_dump($room3->getReservations());
+
+ ///echo $room3->removeReservation($reservation4);
+
+//echo $room2;
 

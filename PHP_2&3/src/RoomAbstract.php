@@ -4,7 +4,7 @@ namespace Hotel;
 
 use Hotel\ReservationException;
 
-abstract class RoomAbstract implements RevervableInterface
+class RoomAbstract implements RevervableInterface
 {
 
     private $roomType;
