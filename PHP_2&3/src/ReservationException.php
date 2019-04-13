@@ -8,6 +8,4 @@ class ReservationException extends \Exception
     {
         return "Sorry but no rooms are free for your choosen dates ";
     }
-
-
 }

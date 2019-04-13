@@ -4,7 +4,6 @@ namespace Hotel;
 
 class Bedroom extends RoomAbstract
 {
-
     private $roomType;
     private static $reservations;
     private $roomNumber;
@@ -24,6 +23,5 @@ class Bedroom extends RoomAbstract
             "bathtub",
         ], 40);
     }
-
 }
 

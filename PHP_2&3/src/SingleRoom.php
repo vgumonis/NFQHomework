@@ -20,6 +20,5 @@ class SingleRoom extends RoomAbstract
             "air-conditioner",
         ], 30);
     }
-
 }
 

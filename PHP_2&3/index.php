@@ -4,7 +4,6 @@ require "vendor/autoload.php";
 
 $room1 = new \Hotel\Apartment();
 
-var_dump($room1->getBalcony());
 
 $petras = new \Hotel\Guest("petras", "petraitis");
 

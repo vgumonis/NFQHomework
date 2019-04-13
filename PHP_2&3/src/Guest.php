@@ -5,10 +5,8 @@ namespace Hotel;
 
 class Guest
 {
-
     private $firstName;
     private $lastName;
-
 
     public function __construct(string $firstName, string $lastName)
     {
@@ -32,5 +30,4 @@ class Guest
     {
         return "Guest with fist name  " . $this->getFirstName() . " and last name " . $this->getLastName() . ".";
     }
-
 }

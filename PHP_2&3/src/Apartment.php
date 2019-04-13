@@ -4,7 +4,6 @@ namespace Hotel;
 
 class Apartment extends RoomAbstract
 {
-
     private $roomType;
     private static $reservations;
     private $roomNumber;
@@ -13,7 +12,6 @@ class Apartment extends RoomAbstract
     private $balcony;
     private $price;
     private $extras;
-
 
     public function __construct()
     {
@@ -27,5 +25,5 @@ class Apartment extends RoomAbstract
             "Wi-fi"
         ], 50);
     }
-
 }
+

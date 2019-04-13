@@ -6,7 +6,6 @@ use Hotel\ReservationException;
 
 class RoomAbstract implements RevervableInterface
 {
-
     private $roomType;
     private static $reservations;
     private $roomNumber;
@@ -15,7 +14,6 @@ class RoomAbstract implements RevervableInterface
     private $balcony;
     private $extras;
     private $price;
-
 
     public function __construct(
         string $roomType,
@@ -41,30 +39,25 @@ class RoomAbstract implements RevervableInterface
         return $this->roomType;
     }
 
-
     public function getReservations(): ?array
     {
         return self::$reservations[$this->getRoomType()];
     }
-
 
     public function getRoomNumber(): int
     {
         return $this->roomNumber;
     }
 
-
     public function getBedCount(): int
     {
         return $this->bedCount;
     }
 
-
     public function getRestroom(): bool
     {
         return $this->restroom;
     }
-
 
     public function getBalcony(): bool
     {
@@ -76,16 +69,13 @@ class RoomAbstract implements RevervableInterface
         return $this->extras;
     }
 
-
     public function getPrice(): int
     {
         return $this->price;
     }
 
-
     public function addReservation(Reservation $reservation): int
     {
-
         if (isset(self::$reservations[$this->getRoomType()]) ) {
             foreach (self::$reservations[$this->getRoomType()] as $presentReservation) {
 
@@ -133,5 +123,5 @@ class RoomAbstract implements RevervableInterface
             return false;
         }
     }
-
 }
+

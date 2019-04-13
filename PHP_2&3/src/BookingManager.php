@@ -4,7 +4,6 @@ namespace Hotel;
 
 class BookingManager
 {
-
     public static function bookRoom(RoomAbstract $room, Reservation $reservation)
     {
         try {

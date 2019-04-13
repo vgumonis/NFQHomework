@@ -50,3 +50,4 @@ class Reservation
         return "Reservation made by " . $this->getGuest() . " stated on " . $this->getStartDate()->format('Y-m-d H:i:s') . " and ends " . $this->getEndDate()->format('Y-m-d H:i:s');
     }
 }
+
